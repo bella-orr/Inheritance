@@ -88,13 +88,19 @@ public class Person
         return title + " " + firstName + " " + lastName;
     }
 
-    public String getAge()
+    public int getAge()
     {
-        int age = 2023 - YOB;
-        String strAge = String.valueOf(age);
-        return strAge;
+        int curAge = 2023 - YOB;
+        return curAge;
 
     }
+
+    public int getAge(int year)
+    {
+        int age = year - YOB;
+        return age;
+    }
+
 
 
     public String toCSVDataRecord()

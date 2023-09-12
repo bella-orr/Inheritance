@@ -84,8 +84,9 @@ class PersonTest {
     void getAge()
     {
         example.setYOB(1060);
-        assertEquals("963", example.getAge());
+        assertEquals(963, example.getAge());
     }
+
 
     @Test
     void toCSVDataRecord()

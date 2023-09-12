@@ -49,6 +49,13 @@ public class Inheritance
 
         }
 
+        System.out.println();
+
+        //Prints out the array list of Workers and Salary Workers
+        for(Worker e:employees)
+        {
+            System.out.println(e);
+        }
 
 
 
