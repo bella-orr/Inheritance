@@ -11,7 +11,7 @@ class SalaryWorkerTest
     void setUp()
     {
         example = new SalaryWorker("000001", "Bilbo", "Baggins", "Esq.",
-                1060, 15.0, 60000.0 );
+                1060, 15.0, 52000.0 );
     }
 
     @Test
@@ -28,7 +28,7 @@ class SalaryWorkerTest
                 ", firstName='" + "Bilbo" + '\'' +
                 ", lastName='" + "Baggins" + '\'' +
                 ", title='" + "Esq." + '\'' +
-                ", YOB=" + 1060 +  '\'' + ", hourlyPayRate=" + 15.0 + '\''  +"}" + '\'' + ", annualSalary = " + 60000.0 +
+                ", YOB=" + 1060 +  '\'' + ", hourlyPayRate=" + 15.0 + '\''  +"}" + '\'' + ", annualSalary = " + 52000.0 +
                 '}', example.toString());
 
     }
@@ -36,12 +36,13 @@ class SalaryWorkerTest
     @Test
     void calculateWeeklyPay()
     {
+        assertEquals(1000.0, example.calculateWeeklyPay(0));
 
     }
 
     @Test
     void displayWeeklyPay()
     {
-
+        assertEquals(1000.0 + " is 1/52 pay of the annual pay", example.displayWeeklyPay());
     }
 }
