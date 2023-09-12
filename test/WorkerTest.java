@@ -19,6 +19,7 @@ class WorkerTest
 
     }
 
+
     @Test
     void testToString()
     {
@@ -26,7 +27,7 @@ class WorkerTest
                 ", firstName='" + "Bilbo" + '\'' +
                 ", lastName='" + "Baggins" + '\'' +
                 ", title='" + "Esq." + '\'' +
-                ", YOB=" + 1060 +  '\'' + ", hourlyPayRate=" + 42.0 +
+                ", YOB=" + 1060 +  '\'' + "}" + ", hourlyPayRate=" + 42.0 +
                 '}', example.toString());
     }
 

@@ -21,14 +21,33 @@ public class SalaryWorker extends Worker
         this.annualSalary = annualSalary;
     }
 
+
     //to string
 
     @Override
     public String toString()
     {
-        return "SalaryWorker{" +
-                "annualSalary=" + annualSalary +
-                '}';
+        return "salaryWorker{" + "ID='" + this.getID() + '\'' +
+                ", firstName='" + this.getFirstName() + '\'' +
+                ", lastName='" + this.getLastName() + '\'' +
+                ", title='" + this.getTitle() + '\'' +
+                ", YOB=" + this.getYOB() +  '\'' + ", hourlyPayRate=" + this.getHourlyPayRate() + '\''  +"}" + '\'' + ", annualSalary = " +
+                this.getAnnualSalary() + '}';
+    }
+
+    //overrides calculateWeeklyPay in the Parent class Worker
+    public double calculateWeeklyPay(double hoursWorked)
+    {
+        double weeklyPay = (annualSalary/52.0);
+        return weeklyPay;
+    }
+
+    //override displayWeeklyPay in the Parent class Worker
+    public String displayWeeklyPay()
+    {
+        //goes to calculateWeeklyPay on SalaryWorker
+        double weeklyPay = calculateWeeklyPay(0);
+        return weeklyPay + " is 1/52 pay of the annual pay";
     }
 
 

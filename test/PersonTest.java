@@ -26,7 +26,8 @@ class PersonTest {
     }
 
     @Test
-    void setYOB() {
+    void setYOB()
+    {
     }
 
     @Test
